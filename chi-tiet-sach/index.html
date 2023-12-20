@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book detail</title>
+    <link rel="icon" href="../Images/icons/icons8-book-shelf-64.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../vendor/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Link to jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Link to Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/form.css">
+
+    <link rel="stylesheet" href="./css/book_slide.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/global.css">
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand font-weight-bold text-uppercase" href="#">My Library</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item font-weight-normal">
+                        <a class="nav-link" href="../trangchu.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item active font-weight-normal">
+                        <a class="nav-link" href="../pages/thuvien.html">Thư Viện <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+
+
+
+                    <li class="nav-item font-weight-normal">
+                        <a class="nav-link" href="../pages/quanlysach.html">Quản lý sách</a>
+                    </li>
+
+                    <li class="nav-item font-weight-normal">
+                        <a class="nav-link" href="../pages/quanlythuvien.html">Quản lý thư viện</a>
+                    </li>
+                </ul>
+                <form class="my-2 my-lg-0 search-container">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <div class="book-search-container">
+
+                        <ul class="search-list-result">
+
+                        </ul>
+                    </div>
+                </form>
+                <a href="../pages/dangnhap.html" class="login-btn">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="chi-tiet-sach">
+        <!-- Tạo đường dẫn trang hiện tại ở đầu trang -->
+        <ul class="path-pages">
+            <li><a href="../pages/thuvien.html">Thư Viện</a></li>
+            <li><i class="fa-solid fa-chevron-right"></i></li>
+            <li><a href="#" class="current-page">Đắc Nhân Tâm</a></li>
+
+        </ul>
+        <!-- phần chứa các nội dung chính bên trái trang gồm thông tin chi tiết sách, và các sách cùng thể loại, comments -->
+        <div class="left-side book-details">
+            <h2 class="mb-3 book-title" style="text-align: center;"></h2>
+            <br>
+            <!-- chứa thông tin chi tiết sách -->
+            <div class="thongtinanh">
+                <!-- ảnh sách -->
+                <div class="anhsach">
+                    <img src="#" alt="Book Cover" class="img-fluid mb-4">
+                </div>
+                <!-- nơi chứa các thông tin về sách -->
+                <div class="thongtinsach">
+                    <p><strong>Tác Giả:</strong> <span class="tac-gia"></span></p>
+                    <b><span>Thể loại: </span></b>
+                    <a href="#" title="#" class="the-loai-sach"></a>
+                    <br>
+                    <br>
+                    <p><b>Ngày cập nhật:</b> <span class="ngay-cap-nhat"></span></p>
+
+                    <p><b>Đánh Giá:</b> <span class="rating"></span></p>
+                    <br>
+                    <button class="btn btn-primary btn-order">Đặt Sách</button>
+                    <br />
+                    <br>
+                    <p class="book-description"><b>Giới Thiệu:</b> <span class="mo-ta">Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                </div>
+
+                </p>
+            </div>
+
+
+
+
+            <br>
+            <br>
+            <!-- hiển thị danh sách các quyển sách liên quan -->
+            <div class="list-post-other">
+                <h3>Sách liên quan </h3>
+                <div class="swiper mySwiper">
+                    <ul class="swiper-wrapper lien-quan sach-lien-quan-list">
+                        <!-- sách liên quan sẽ được jquery giúp hiển thị bên trong -->
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- phần chứa danh sách các quyển sách cùng tác giả -->
+        <div class="right-side">
+            <h3 style="text-align: center;">Sách Cùng Tác Giả</h3>
+            <br>
+            <div class="list-sach-cung-tgia">
+                <!-- sách cùng tác giả sẽ được jquery xử lý và render bên dưới đây -->
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+
+        $.getJSON("../jsons/books.json", function (data) {
+
+
+            //biến lưu trữ số lượng comment để tiến hành tăng thêm comment mỗi khi có user comment
+            let soluongComment = 0;
+            const books = data;
+
+            //xử lý tìm kiếm sách trên thanh nav
+            const searchBarInput = document.querySelector('.navbar .search-container input');
+            searchBarInput.oninput = function (e) {
+                let searchVal = e.target.value;
+                let listBookSearched = [];
+                if (searchVal !== '') {
+                    listBookSearched = books.filter((book, index) => book.tensach.includes(searchVal));
+
+                }
+                $('.search-list-result').text('')
+                listBookSearched.forEach((book, index) => {
+                    const bookTitleFound = book.tensach.replace(searchVal, `<b style="color: var(--primary-color);">${searchVal}</b>`)
+                    $('.search-list-result').append(`<li class="search-book book-search-${index}">
+                            <a href="./index.html?id=${book.id}">
+                                <div class="book-search-img">
+                                    <img src=${book.anhsach}
+                                        alt="anh-sach-${index}">
+                                </div>
+                                <div class="book-search-info">
+                                    <h5 class="book-search-title">${bookTitleFound}</h5>
+                                    <h5 class="book-search-author">${book.tentacgia}</h5>
+                                </div>
+                                </a>
+                                
+                            </li>`)
+                })
+            }
+            //lấy ra các selector cần thiết để xử lý thêm nội dung
+            const titlebook = $('.book-title');
+            const tacgia = $('.tac-gia')
+            const mota = $('.mo-ta')
+            const theloaisach = $('.the-loai-sach')
+            const ngaycapnhatsach = $('.ngay-cap-nhat');
+            const imgsach = $('.anhsach img');
+            const danhgia = $('.rating');
+            const urlString = window.location.href;
+
+            /*-------lấy nội dung từ id và render ra-----------*/
+            // Create a URL object
+            const url = new URL(urlString);
+
+            // Get the search parameters
+            const searchParams = url.searchParams;
+
+            // Get specific parameters
+            const bookId = searchParams.get('id');
+
+            if (bookId) {
+                for (let j = 0; j < books.length; j++) {
+                    const book = books[j];
+                    if (book.id === bookId) {
+                        //sau khi tìm thấy sách trong danh sách
+
+                        //xử lý hiển thị đường dẫn
+                        $('.path-pages .current-page').text(book.tensach);
+
+                        //thêm nội dung của cuốn sách đã tìm thấy vào các selector hiển thị nội dung
+                        titlebook.text(book.tensach);
+                        tacgia.text(book.tentacgia);
+                        mota.text(book.mota);
+                        ngaycapnhatsach.text(book.ngaycapnhat)
+                        theloaisach.text(book.theloai.join(' - '))
+                        danhgia.text(book.rating + ' / 5.0')
+                        imgsach.attr('src', book.anhsach)
+
+
+                        //xử lý tìm kiếm sách liên quan
+                        let listSachLienQuan = books.filter((b, index) => {
+
+                            // Sử dụng filter để lọc các cuốn sách trùng lặp thể loại 
+                            const bookTypeCommon = b.theloai.filter(bookType => book.theloai.includes(bookType));
+
+                            //logic: chỉ cần số cuốn sách trùng lặp trùng với số cuốn sách trong checkbox thì trả về những cuốn sách đó
+
+                            return bookTypeCommon.length > 0
+
+                        });
+
+                        //hiển thị sách liên quan
+                        for (let j = 0; j < listSachLienQuan.length; j++) {
+                            const sachLienQuan = listSachLienQuan[j];
+                            $('.sach-lien-quan-list').append(`<li class="swiper-slide card sach-lien-quan">
+                            <img class="card-img-top" src=${sachLienQuan.anhsach} alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">${sachLienQuan.tensach}</h5>
+                                <p class="card-text mo-ta-sach">${sachLienQuan.mota}</p>
+                                <a href="#" class="btn btn-outline-primary btn-view-book">Xem Sách</a>
+                            </div>
+                        </li>`)
+                        }
+
+                        //Xử lý tìm kiếm sach cùng tác giả
+                        let listSachCungTacGia = []
+
+                        //lọc và tìm kiếm sách dụa trên tên tác giả
+                        listSachCungTacGia = books.filter(b => b.tentacgia === book.tentacgia && b.id !== bookId);
+
+                        //reset html
+                        $('.list-sach-cung-tgia').text('')
+
+                        //lọc qua và hiển thị sách cùng tác giả
+                        if (listSachCungTacGia.length !== 0) {
+                            for (let j = 0; j < listSachCungTacGia.length; j++) {
+                                const sachCungTg = listSachCungTacGia[j];
+
+                                $('.list-sach-cung-tgia').append(`<div class="sach-cung-tgia">
+                        <div class="anh-sach-cung-tg">
+                            <img src="${sachCungTg.anhsach}" alt="anh-sach-cung-tac-gia-${j}">
+                        </div>
+                        <div class="right-sach">
+                            <p class="ten-sach">${sachCungTg.tensach}</p>
+                            <p class="tac-gia">${sachCungTg.tentacgia}</p>
+    
+                            <p class="rating-container"><strong style="font-size: 10px;">Đánh Giá:</strong> <span
+                                    class="rating">${sachCungTg.rating.toFixed(1)} / 5.0</span></p>
+                            <a class="btn btn-primary view-book-btn"
+                                style="font-size: 14px; padding: 0.25rem 1rem; color: #fff; cursor: pointer;">xem
+                                sách</a>
+                        </div>
+                    </div>`)
+                            }
+                        } else {
+                            // khi không tìm thấy sách thì hiển thị dòng bên dưới
+                            $('.list-sach-cung-tgia').html(`<div style="text-align:center; line-height: 50px;min-height: 50px;">Không có sách cùng tác giả</div>`)
+                        }
+
+                        //khi tìm thấy thì tiến hành break;
+                        break;
+                    }
+                }
+            }
+
+
+
+            // hàm lấy ngày hiện tại hiên thị lên comment
+            function getCurrentDate() {
+                var currentDate = new Date();
+                return currentDate.toDateString();
+            }
+        })
+
+    </script>
+    <script>
+        // đoạn code dùng config slider 
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+
+</body>
+
+</html>

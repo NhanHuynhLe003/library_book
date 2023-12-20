@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: #5b5b5b;
+}
+
+:root {
+
+    --sup-text: #5b5b5b;
+    --xs-text: 10px;
+    --sm-text: 12px;
+    --md-text: 16px;
+    --md-lg-text: 20px;
+    --lg-text: 24px;
+    --primary-color: #007bff;
+    --warning-color: #ffc107;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+header nav #search-button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+header nav #search-button:hover {
+    background-color: #fff;
+    color: #007bff;
+    font-weight: bold;
+}
+
+main#content {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.filter-book {}
+
+.filter-book .rating ul {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-book .rating ul li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.filter-book .cate-list {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.filter-book .cate-list li {
+    list-style-type: none;
+}
+
+.filter-book .cate-list li button {
+    background: none;
+    border: none;
+
+}
+
+.filter-book #see-all-btn {
+    padding: 4px 20px;
+    font-weight: 600;
+}
+
+.filter-book .cate-list li button:hover {}
+
+.book-container .side-right {
+    padding: 0 2em;
+}
+
+.book-container .side-right .search-book {
+    position: relative;
+
+
+}
+
+.book-container .side-right .search-book input {
+    width: 100%;
+    padding: 0.4em 4.5em 0.4em 0.4em;
+    border-radius: 8px;
+    outline: 1px solid #ccc;
+    border: none;
+}
+
+.book-container .side-right .search-book button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 8px 8px 0;
+
+}
+
+.side-right .list-book-container {
+    gap: 4rem;
+    justify-content: center;
+}
+
+
+.side-right nav {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book .thumbnail img {
+    width: 100%;
+}
+
+.book .right-book .name-book {
+    font-weight: bold;
+}
+
+.book .right-book .author {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--sup-text);
+}
+
+
+
+.filter-book .cate-list input {
+    cursor: pointer;
+    width: 1.4rem;
+    height: 1.2rem;
+    margin-right: 10px;
+
+}
+
+.filter-book .cate-list input:checked {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.filter-book .cate-list label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 4px 12px;
+    margin: 0;
+
+    font-size: var(--md-text);
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.filter-book .cate-list label:hover {
+    background-color: #e8e8e8;
+
+}
+
+.side-right {}
+
+
+
+/* book css */
+
+.side-right .list-book-container {
+    padding: 8px 12px;
+    margin-bottom: 32px;
+}
+
+.side-right .list-book-container .book {
+    width: 46%;
+    padding: 2rem 0.5rem 2rem 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ebebeb;
+    box-shadow: 2px 2px #ebebeb;
+    transition: 300ms;
+    position: relative;
+}
+
+.side-right .list-book-container .book:hover {
+    border: 1px solid var(--warning-color);
+    cursor: pointer;
+    box-shadow: none;
+    position: relative;
+    box-shadow: 2px 2px #f2dfa6;
+}
+
+
+
+.book .right-book .name-book {
+    font-size: var(--md-text);
+    margin-bottom: 0.5rem;
+}
+
+.book .right-book .author-wrapper {
+    font-size: var(--sm-text);
+    margin-bottom: 1rem;
+}
+
+.book .right-book .author {
+    font-size: var(--sm-text);
+    font-weight: 600;
+
+}
+
+.book .rating {
+    display: flex;
+    gap: 8px;
+}
+
+.book .rating li {
+    list-style-type: none;
+}
+
+.book .rating i {
+    color: var(--warning-color);
+}
+
+.book .desc {
+    font-size: var(--sm-text);
+    color: var(--sup-text);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .book-container {
+        width: 100% !important;
+    }
+
+    .filter-book {
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .rating input {
+        width: 100%;
+
+    }
+
+    .side-right .list-book-container .book {
+        width: 100% !important;
+    }
+}

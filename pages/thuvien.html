@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện</title>
+    <link rel="icon" href="../Images/icons/icons8-book-shelf-64.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/fontawesome-free-6.4.2-web/css/all.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand font-weight-bold text-uppercase" href="#">My Library</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item font-weight-normal">
+                        <a class="nav-link" href="../trangchu.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item active font-weight-normal">
+                        <a class="nav-link" href="#">Thư Viện <span class="sr-only">(current)</span></a>
+                    </li>
+
+
+                </ul>
+                <form class="my-2 my-lg-0 search-container">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <div class="book-search-container">
+
+                        <ul class="search-list-result">
+
+                        </ul>
+                    </div>
+                </form>
+
+            </div>
+        </nav>
+    </header>
+    <main id="content">
+        <!-- Bộ Lọc Phân Loại Sách -->
+        <div class="book-container w-75 row">
+            <div class="filter-book col-md-2" title="Lọc Theo Thể Loại">
+                <h4><i class="fa-solid fa-filter"></i> Phân Loại</h4>
+                <br>
+                <!-- Lọc Theo Thể Lọa -->
+                <h5>Thể Loại</h5>
+
+                <hr>
+                <div class="cate-list">
+                    <!-- Nơi đây sẽ chứa tất cả checkbox thể loại -->
+                </div>
+                <br>
+                <!-- thể loại ban đầu bị giới hạn, bấm vào xem thêm để xem thêm nhiều thể loại khác -->
+                <button class="btn btn-primary add-more-genre-btn">Xem Thêm</button>
+                <br>
+                <br>
+                <!-- BỘ lọc theo đánh giá -->
+                <div class="rating" title="Lọc Theo Đánh Giá">
+                    <h5>Đánh Giá</h5>
+
+                    <hr>
+                    <!-- input chứa các đánh giá sắp xếp từ 0 đến 5 sau và ở 0 là không phân loại sách -->
+                    <div class="rating-field">
+                        <input value="0" type="range" class="form-range" min="0" max="5" id="rating-field-input"
+                            step="0.5">
+                    </div>
+                    <!-- hiển thị kết quả khi kéo thanh trượt -->
+                    <h6 id="rating-result">Lọc Theo <b style="color: var(--primary-color);">0 sao</b></h6>
+                </div>
+                <br>
+                <!-- Nút nhấn để kết thúc quá trình lọc -->
+                <button class="btn btn-outline-primary" id="filter-submit-btn">Tìm Kiếm</button>
+            </div>
+            <div class="side-right col-md-10">
+                <h5>Search Box</h5>
+                <br>
+                <!-- Bộ tìm kiếm dựa trên tên sách hay tên tác giả -->
+                <div class="search-book">
+                    <input type="text w-100" placeholder="Enter Your Book" class="search-book-input pl-2" />
+                    <button class="btn btn-primary search-book-btn"><i
+                            class="fa-solid fa-magnifying-glass text-white px-4"></i></button>
+                </div>
+                <br>
+                <div class="filter-sort-container d-flex justify-content-md-between mt-4">
+                    <!-- Đoạn code hiển thị kết  quả tìm kiếm -->
+                    <div class="search-answer"></div>
+
+                    <div class="sort-container">
+                        <label class="font-weight-bold">Sort By: </label>
+                        <!-- Đoạn code hiển thị ra các lựa chọn lọc sách -->
+                        <select class="px-4 pt-1 pb-1 ml-2 sort-book-select-option">
+                            <option class="sort-opt" value="000" hidden>Sắp xếp theo</option>
+                            <option class="sort-opt" value="001">Phù hợp nhất</option>
+                            <option class="sort-opt" value="002">Yêu Thích Nhất</option>
+                            <option class="sort-opt" value="003">Đọc Nhiều Nhất</option>
+                            <option class="sort-opt" value="004">Mới Nhất</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="list-book-container d-flex flex-wrap">
+                    <!-- Đoạn code hiển thị ra tất cả các cuốn sách đã lọc bên trong -->
+
+                </div>
+
+                <!-- Chia trang web dựa theo pagination -->
+                <nav aria-label="Page navigation" class="d-flex justify-content-md-between pagination-nav">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+
+
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(document).ready(async function () {
+        // Hàm tính toán chia trang
+        function paginate(products = [], itemsPerPage = 8, currentPage = 1) {
+            return products.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+        }
+
+        // Hàm thêm sự kiện click vào pagination khi tạo mới và lúc khởi tạo
+        function handleClickPagination(itemsPerPage = 8) {
+            $('nav .pagination .page-item').click(function (e) {
+                e.preventDefault();
+
+
+                // lấy ra nội dung thẻ pagination node hiện tại và tiến hành tính toán sau đó render
+                const curPaginationLink = $(this).children('a');
+                const curBookListCommon = findCommon(...Object.values(bookFilterMap));
+                const curBookListPerPage = paginate(curBookListCommon, itemsPerPage, Number(curPaginationLink.text()));
+
+
+                $('nav .pagination .page-item').removeClass('active')
+                // thêm class active cho cái pagination vừa render
+                $(this).addClass('active')
+                // render lại trang sau khi update dữ liệu
+                renderBookLib(curBookListPerPage)
+            })
+        }
+        // hàm sẽ tiến hành reset lại pagination khi có hành động update trang
+        function resetPagination(books) {
+
+            //tính toán tổng số trang sẽ render
+            const maxPagePaginationWhenClick = Math.ceil(books.length / 8);
+            // đoạn code reset
+            $('nav .pagination').html(`<li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+
+
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>`)
+
+            if (books.length > 0 && maxPagePaginationWhenClick > 1) {
+                // chỉ render pagination với các trang có có từ 2 pagination trở lên
+                for (let i = maxPagePaginationWhenClick; i > 0; i--) {
+                    const newLinkPagination = $(`<li class="page-item"><a class="page-link" href="?page=${i}">${i}</a></li>`)
+                    $('nav .pagination .page-item:eq(0)').after(newLinkPagination)
+                }
+            } else {
+                $('nav .pagination').html('')
+            }
+            $('nav .pagination .page-item').removeClass('active');
+            $('nav .pagination .page-item:eq(1)').addClass('active');
+
+            //thêm sự kiện vào cho pagination vừa tạo ra;
+            handleClickPagination();
+
+            // trả về số sách trang đầu tiên
+            return paginate(books, 8, 1);
+        }
+
+        function findCommon(...arrays) {
+            const elementCountMap = new Map(); // Sử dụng Map để đếm số lần xuất hiện của từng phần tử
+
+            // Duyệt qua từng mảng
+            for (const array of arrays) {
+                // Duyệt qua từng phần tử trong mảng và tăng giá trị trong bảng băm
+                for (const element of array) {
+
+                    const count = elementCountMap.get(element) || 0;
+                    elementCountMap.set(element, count + 1);
+                }
+            }
+
+            // Lọc các phần tử có số lần xuất hiện bằng số mảng
+            const commonElements = Array.from(elementCountMap.entries())
+                .filter(([element, count]) => count === arrays.length)
+                .map(([element]) => element);
+
+            return commonElements;
+        }
+
+        async function sleep(ms) {
+            await new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        // hàm này sẽ xử lý rating và tạo ra sao tương ứng với số lượng rating
+        function createStarRating(rating) {
+            if (rating === 0) {
+                return '<i class="far fa-star"></i>'.repeat(5); // Nếu rating là 0, hiển thị 5 ngôi sao rỗng
+            }
+
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 !== 0;
+            const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+            const filledStars = Array.from({ length: fullStars }, (_, index) => '<i class="fas fa-star"></i>');
+            const halfStar = hasHalfStar ? '<i class="fas fa-star-half-alt"></i>' : '';
+            const emptyStar = Array.from({ length: emptyStars }, (_, index) => '<i class="far fa-star"></i>');
+
+            const starRatingHTML = filledStars.concat(halfStar, emptyStar).join('');
+            return starRatingHTML;
+        }
+
+        // hàm này sẽ tiến hành render lại trang mỗi khi gọi
+        async function renderBookLib(books) {
+            console.log("Data:", books)
+
+            // thêm hiệu ứng loading cho trang
+            $('.list-book-container').html(`<div class="spinner-border text-primary" style="width: 4rem; height: 4rem;">
+                    <span class="sr-only"><span>
+                </div>`)
+
+            $('.list-book-container').addClass('active-render-book')
+
+            await sleep(800);
+            $('.list-book-container').removeClass('active-render-book')
+
+            // KHi không tìm thấy code hiển thị dòng chữ này
+            if (books.length === 0) {
+                $('.list-book-container').text('Không tìm thấy sách');
+
+                return
+            }
+            // reset trước khi tạo mới
+            $('.list-book-container').html('')
+            for (let i = 0; i < books.length; i++) {
+                const sach = books[i]
+                $('.list-book-container').append(`<div class="book book${i} row">
+                                <div class="left-book thumbnail col-5">
+                                    <img src=${sach.anhsach}>
+                                </div>
+                                <div class="right-book col-7">
+                                    <div class="name-book">${sach.tensach}</div>
+                                    <div class="author-wrapper">By <span class="author">${sach.tentacgia}</span></div>
+                                    <ul class="rating">
+                                        ${createStarRating(sach.rating)}
+                                    </ul>
+                                    <div class="desc">${sach.mota}</div>
+                                    
+                                    <a href="/chi-tiet-sach/index.html?id=${sach.id}" class="borrow-btn btn btn-outline-success">Mượn Sách</a>
+                                </div>
+                            </div>`)
+            }
+        }
+
+        // (*) bảng này dùng lưu trữ tất cả giá trị của bộ lọc sau đó dùng hàm findCommon gộp lại tìm điểm chung 
+        let bookFilterMap = {
+            booksGenreType: [],
+            booksRating: [],
+            booksSortType: [],
+            booksSearchResult: []
+        }
+
+        // xử lý khi checkbox có sự thay đổi
+        function handleBookTypeInput(books) {
+
+            checkboxList = {};
+            $('.cate-list .cate-check-btn').change(function () {
+                //reset rating when input change
+
+                const checkboxInput = $(this).attr('id');
+                checkboxList[checkboxInput] = !checkboxList[checkboxInput];
+                const listType = Object.keys(checkboxList);
+                const listTypeFiltered = listType.filter(type => checkboxList[type])
+
+
+                let listTypeFilteredNew = [...books];
+                if (listTypeFiltered.length > 0) {
+
+                    listTypeFilteredNew = books.filter((book, index) => {
+
+                        // Sử dụng filter để lọc các cuốn sách trùng lặp thể loại 
+                        const bookTypeCommon = book.theloai.filter(bookType => checkboxList[bookType]);
+
+                        //logic: chỉ cần số cuốn sách trùng lặp trùng với số cuốn sách trong checkbox thì trả về những cuốn sách đó
+
+                        return bookTypeCommon.length > 0 && bookTypeCommon.length === listTypeFiltered.length
+
+                    });
+                }
+
+                //Giá trị mới sẽ được lưu vào bảng filter để xử lý sau
+                bookFilterMap.booksGenreType = [...listTypeFilteredNew]
+                // const newBookPerPage = findCommon(...Object.values(bookFilterMap));
+                // resetPagination(newBookPerPage)
+            })
+        }
+
+        $.getJSON('../jsons/books.json', async function (data) {
+            // lấy dữ liệu từ database và xử lý
+            const books = [...data];
+            bookFilterMap.booksGenreType = [...data]
+            bookFilterMap.booksRating = [...data]
+            bookFilterMap.booksSortType = [...data]
+            bookFilterMap.booksSearchResult = [...data];
+            //render sách ra giao diện khi vừa khởi tạo
+            //thêm lọc theo reccomend
+            let weightNguoiDoc = 0.7;
+            let weightRating = 0.3;
+            books.forEach(function (book) {
+                book.totalScore = (book.soluongnguoidadoc * weightNguoiDoc) + (book.rating * weightRating);
+            });
+
+            //render giao diện khi khởi tạo lần đầu
+            renderBookLib(books);
+
+
+            //** Xử lý tìm kiếm trên thanh nav
+            const searchBarInput = document.querySelector('.navbar .search-container input');
+            searchBarInput.oninput = async function (e) {
+                let searchVal = e.target.value;
+                let listBookSearched = [];
+                if (searchVal !== '') {
+                    listBookSearched = books.filter((book, index) => book.tensach.includes(searchVal));
+                }
+
+
+                $('.search-list-result').text('')
+                listBookSearched.forEach((book, index) => {
+                    const bookTitleFound = book.tensach.replace(searchVal, `<b style="color: var(--primary-color);">${searchVal}</b>`)
+                    $('.search-list-result').append(`<li class="search-book book-search-${index}">
+                                <a href="../chi-tiet-sach/index.html?id=${book.id}">
+                                    <div class="book-search-img">
+                                        <img src=${book.anhsach}
+                                            alt="anh-sach-${index}">
+                                    </div>
+                                    <div class="book-search-info">
+                                        <h5 class="book-search-title">${bookTitleFound}</h5>
+                                        <h5 class="book-search-author">${book.tentacgia}</h5>
+                                    </div>
+                                </a>
+                        </li>`)
+                })
+
+            }
+
+
+            //*** Xử lý thanh tìm kiếm sách 
+            let valueSearchInput = ''
+
+            $('.side-right .search-book').change(function (e) {
+
+
+                valueSearchInput = e.target.value;
+                $('.search-answer').text('');
+                if (valueSearchInput.length > 0) {
+
+                    $('.search-answer').html(`Kết quả tìm kiếm cho <span class="search-content text-primary">${valueSearchInput}</span>`);
+                    //trả về kết quả nếu sách có chứa ký tự trong tên hay tác giả với giá trị nhận vào trên input 
+                    const listBookSearched = books.filter(book => book.tensach.includes(valueSearchInput) || book.tentacgia.includes(valueSearchInput));
+                    bookFilterMap.booksSearchResult = [...listBookSearched]
+
+                    // chia lại trang sau đó render
+                    const booksPerPage = resetPagination(listBookSearched);
+                    renderBookLib(booksPerPage);
+
+                } else {
+                    //khi không có nội dung trên input
+                    bookFilterMap.booksSearchResult = [...books];
+                    const bookFilteredSearch = findCommon(...Object.values(bookFilterMap));
+                    const booksPerPage = resetPagination(bookFilteredSearch);
+                    renderBookLib(booksPerPage);
+                }
+
+            })
+
+            //thay vì xử lý input ta xử lý nút nhấn tìm kiếm cũng tương tự
+            $('.search-book .search-book-btn').click(function () {
+                if (valueSearchInput.length > 0) {
+                    const listBookSearched = books.filter(book => book.tensach.includes(valueSearchInput) || book.tentacgia.includes(valueSearchInput));
+
+                    bookFilterMap.booksSearchResult = [...listBookSearched];
+                    const booksPerPage = resetPagination(listBookSearched);
+                    renderBookLib(listBookSearched);
+
+                } else {
+                    bookFilterMap.booksSearchResult = [...books];
+                    const bookFilteredSearch = findCommon(...Object.values(bookFilterMap));
+                    const booksPerPage = resetPagination(bookFilteredSearch);
+                    renderBookLib(booksPerPage);
+                }
+            })
+
+            //** xử lý thể loại sách
+            $.getJSON('../jsons/theloaisachs.json', function (types) {
+
+
+                types.forEach((typeBook, index) => {
+                    $('.cate-list').append(`<label for="${typeBook}"><input value=${typeBook} class="cate cate-check-btn cate-${index}" type="checkbox" name="${typeBook}" id="${typeBook}" />${typeBook}</label>`)
+                })
+                //tìm các thẻ label tại vị trí lớn hơn 7 và ẩn đi
+                $('.cate-list label:gt(7)').hide();
+
+                //xử lý khi nhấn nút xem thêm thể loại sách
+                $('.add-more-genre-btn').click(function () {
+                    // khi click nó toggle trạng thái show và hide các phần tử từ vị trí số 8 trở đi
+                    $('.cate-list label:gt(7)').toggle();
+
+                })
+
+
+                handleBookTypeInput(books);
+
+
+            })
+
+            /**Handle book rating */
+
+            //đọc giá trị ô input và render ra số sao tương ứng
+            $('#rating-field-input').on('input', function (e) {
+                const valInputRange = Number(e.target.value);
+
+                $('#rating-result').html(`Lọc Theo <b style="color: var(--primary-color);">${valInputRange} sao</b>`)
+
+            })
+
+            //khi không kéo ô input nữa thì xuất hiện event change, tiến hành xử lý lọc sách theo thể loai sau đó render và lưu vào bộ nhớ tổng
+            $('#rating-field-input').change(function (e) {
+
+                const valInputRange = Number(e.target.value);
+
+                let tmpBookRatingList = [...books];
+
+                if (valInputRange !== 0) {
+
+                    tmpBookRatingList = tmpBookRatingList.filter((book) => book.rating === valInputRange);
+                } else {
+                    tmpBookRatingList = [...books]
+                }
+
+                bookFilterMap.booksRating = [...tmpBookRatingList];
+                // const newBookPerPage = findCommon(...Object.values(bookFilterMap));
+                // resetPagination(newBookPerPage)
+
+            })
+
+            //lấy ra tất cả các book đã filter và tìm điểm chung sau đó chia lại trang rồi render;
+            $("#filter-submit-btn").click(function () {
+                const listFilterBook = Object.values(bookFilterMap);
+                const booksFiltered = findCommon(...listFilterBook);
+                const booksPerPage = resetPagination(booksFiltered)
+                renderBookLib(booksPerPage);
+            })
+
+            //xử lý sự kiện khi có lựa chọn bộ lọc
+            $('.sort-book-select-option').change(function () {
+                const listBookFilter = Object.values(bookFilterMap);
+                const sortedBookTmp = findCommon(...listBookFilter);
+                //tạo biến lưu trữ toàn bộ sách
+                let bookListFilterBySelectOpt = [...books];
+                //đọc value của option hiện tại đang nhấn
+                const typeSelectSort = $(this).val()
+
+                //xử lý lọc theo từng case
+                switch (typeSelectSort) {
+                    case "001":
+                        bookListFilterBySelectOpt = sortedBookTmp.slice().sort(function (a, b) {
+                            return b.totalScore - a.totalScore;
+                        });
+                        break;
+                    case "002":
+                        bookListFilterBySelectOpt = sortedBookTmp.slice().sort((a, b) => b.rating - a.rating)
+                        break;
+                    case "003":
+                        bookListFilterBySelectOpt = sortedBookTmp.slice().sort((a, b) => b.soluongnguoidadoc - a.soluongnguoidadoc);
+                        break;
+                    case "004":
+                        bookListFilterBySelectOpt = sortedBookTmp.slice().sort((a, b) => new Date(b.ngaycapnhat) - new Date(a.ngaycapnhat));
+                        break;
+                    default:
+                        console.error("Option", typeSelectSort, 'is not existed!');
+                }
+                //reset và chia lại trang
+                const booksPerPage = resetPagination(bookListFilterBySelectOpt);
+                renderBookLib(booksPerPage);
+            })
+
+
+            //** xử lý chuyển trang bằng pagination
+
+            //render các nút nhấn chuyển trang
+            const itemsPerPage = 8;
+            const maxPagePagination = Math.ceil(books.length / itemsPerPage);
+
+            for (let i = maxPagePagination; i > 0; i--) {
+                const newPagination = $(`<li class="page-item"><a class="page-link" href="?page=${i}">${i}</a></li>`)
+                $('nav .pagination .page-item:eq(0)').after(newPagination)
+            }
+            //render pagination khi vừa khởi tạo
+            const initBooksPerPage = resetPagination(books)
+            renderBookLib(initBooksPerPage);
+
+            handleClickPagination();
+
+        })
+
+
+
+    })
+
+
+</script>
+
+
+</html>

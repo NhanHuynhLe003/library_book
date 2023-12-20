@@ -1,0 +1,211 @@
+[
+  {
+    "id": "002",
+    "tensach": "Đắc Nhân Tâm",
+    "tentacgia": "Dale Carnegie",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/6a/da/bb/185d27fe442a1668cf0196c1b82c87eb.jpg.webp",
+    "mota": "How to Win Friends and Influence People.",
+    "rating": 4,
+    "soluongnguoidadoc": 180,
+    "ngaycapnhat": "2022-08-05",
+    "theloai": ["Phát triển bản thân", "Kỹ năng sống", "Tâm lý"]
+  },
+  {
+    "id": "003",
+    "tensach": "Harry Potter and the Goblet of Fire - Hufflepuff Edition",
+    "tentacgia": "J.K. Rowling",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/0e/c9/15/7ed5e753de1fc8ee39e77f3218e58d38.jpg.webp",
+    "mota": "Series nổi tiếng về thế giới phù thủy của J.K. Rowling.",
+    "rating": 4.5,
+    "soluongnguoidadoc": 250,
+    "ngaycapnhat": "2022-10-08",
+    "theloai": ["Fantasy", "Phiêu lưu", "Thiếu nhi"]
+  },
+  {
+    "id": "004",
+    "tensach": "Những Người Khốn Khổ",
+    "tentacgia": "Charles Dickens",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/45/3b/fc/aa81d0a534b45706ae1eee1e344e80d9.jpg.webp",
+    "mota": "A Tale of Two Cities.",
+    "rating": 3.5,
+    "soluongnguoidadoc": 150,
+    "ngaycapnhat": "2022-08-15",
+    "theloai": ["Kinh điển", "Lịch sử", "Tâm lý"]
+  },
+  {
+    "id": "005",
+    "tensach": "Quotations from Chairman Mao Tse-tung",
+    "tentacgia": "Mao Zedong",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/f5/bd/42/fef595013638dac85584e3524242a119.jpg.webp",
+    "mota": "Danh ngôn của Chủ tịch Mao.",
+    "rating": 4.5,
+    "soluongnguoidadoc": 120,
+    "ngaycapnhat": "2022-08-20",
+    "theloai": ["Chính trị", "Lãnh đạo", "Danh ngôn"]
+  },
+  {
+    "id": "006",
+    "tensach": "Nghệ thuật bán hàng bậc cao",
+    "tentacgia": "Stephen R. Covey",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/2c/42/df/f7a94bf2fe203d71781e6b98adda3a44.jpg.webp",
+    "mota": "The Seven Habits of Highly Effective People.",
+    "rating": 5,
+    "soluongnguoidadoc": 160,
+    "ngaycapnhat": "2022-08-25",
+    "theloai": ["Kỹ năng sống", "Quản lý", "Phát triển bản thân"]
+  },
+  {
+    "id": "007",
+    "tensach": "Harry Potter và Hòn Đá Phù Thủy",
+    "tentacgia": "J.K. Rowling",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/cb/ea/f1/54614e3e1c9d5de1e7cd6b1be97bbbb4.jpg.webp",
+    "mota": "Harry Potter and the Philosopher's Stone.",
+    "rating": 3,
+    "soluongnguoidadoc": 210,
+    "ngaycapnhat": "2022-09-02",
+    "theloai": ["Fantasy", "Phiêu lưu", "Thiếu nhi"]
+  },
+  {
+    "id": "008",
+    "tensach": "Gone with the Wind",
+    "tentacgia": "Margaret Mitchell",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/48/88/18/68b5bed72c4818448c2e6e96c9da756f.jpg.webp",
+    "mota": "Một tác phẩm kinh điển về thời kỳ nội chiến Mỹ.",
+    "rating": 2.5,
+    "soluongnguoidadoc": 180,
+    "ngaycapnhat": "2022-09-08",
+    "theloai": ["Lãng mạn", "Lịch sử", "Tâm lý"]
+  },
+  {
+    "id": "009",
+    "tensach": "Nhà Giả Kim ",
+    "tentacgia": "Paulo Coelho",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/45/3b/fc/aa81d0a534b45706ae1eee1e344e80d9.jpg.webp",
+    "mota": "The Great Gatsby.",
+    "rating": 4,
+    "soluongnguoidadoc": 170,
+    "ngaycapnhat": "2022-09-12",
+    "theloai": ["Kinh điển", "Lãng mạn", "Tâm lý"]
+  },
+  {
+    "id": "010",
+    "tensach": "Bí Mật",
+    "tentacgia": "Rhonda Byrne",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/e5/df/e6/82cdcfe8d40e371e412b26fe547aef95.jpg.webp",
+    "mota": "The Secret.",
+    "rating": 4.5,
+    "soluongnguoidadoc": 150,
+    "ngaycapnhat": "2022-09-18",
+    "theloai": ["Phát triển bản thân", "Tâm lý", "Tôn giáo"]
+  },
+  {
+    "id": "011",
+    "tensach": "Bàn Về Hạnh Phúc",
+    "tentacgia": "Matthieu Ricard",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/1c/79/1f/acb40ea40bac6eabc03d2a5ef82c7115.jpg.webp",
+    "mota": "Ten Minutes to Happiness.",
+    "rating": 5,
+    "soluongnguoidadoc": 140,
+    "ngaycapnhat": "2022-09-22",
+    "theloai": ["Tâm lý", "Phát triển bản thân", "Hạnh phúc"]
+  },
+  {
+    "id": "012",
+    "tensach": "Think and Grow Rich",
+    "tentacgia": "Napoleon Hill",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/2a/cd/8e/a2a66259793b4ac38379e01d68a97aa6.jpg.webp",
+    "mota": "Suy nghĩ và Thành công.",
+    "rating": 5,
+    "soluongnguoidadoc": 160,
+    "ngaycapnhat": "2022-09-28",
+    "theloai": ["Phát triển bản thân", "Kinh doanh", "Tài chính"]
+  },
+  {
+    "id": "013",
+    "tensach": "The Catcher in the Rye",
+    "tentacgia": "J.D. Salinger",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/media/catalog/product/i/m/img587.jpg.webp",
+    "mota": "Một trong những tiểu thuyết cảm động nhất của thế kỷ 20.",
+    "rating": 3.5,
+    "soluongnguoidadoc": 130,
+    "ngaycapnhat": "2022-10-03",
+    "theloai": ["Tiểu thuyết", "Tâm lý", "Lãng mạn"]
+  },
+  {
+    "id": "014",
+    "tensach": "Harry Potter và Hoàng Tử Lai",
+    "tentacgia": "J.K. Rowling",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/e1/49/48/7fce3817225ff1e713cc79e72520f89a.jpg.webp",
+    "mota": "Harry Potter and the Half-Blood Prince.",
+    "rating": 2.5,
+    "soluongnguoidadoc": 200,
+    "ngaycapnhat": "2022-10-09",
+    "theloai": ["Fantasy", "Phiêu lưu", "Thiếu nhi"]
+  },
+  {
+    "id": "015",
+    "tensach": "Tôi, Tên Gì? Ai, Tôi Là Ai?",
+    "tentacgia": "Trịnh Công Sơn",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/57/91/af/130cc38b04ec24e1c7c402f3a25a724a.jpg.webp",
+    "mota": "Nhìn nhận về bản thân và thế giới xung quanh.",
+    "rating": 2,
+    "soluongnguoidadoc": 120,
+    "ngaycapnhat": "2022-10-15",
+    "theloai": ["Tâm lý", "Phát triển bản thân", "Tôn giáo"]
+  },
+  {
+    "id": "016",
+    "tensach": "Harry Potter và Bảo Bối Tử Thần",
+    "tentacgia": "J.K. Rowling",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/5b/f5/54/142a95367f208a7fbb4e7c5957976481.jpg.webp",
+    "mota": "Harry Potter and the Deathly Hallows.",
+    "rating": 4,
+    "soluongnguoidadoc": 220,
+    "ngaycapnhat": "2022-10-20",
+    "theloai": ["Fantasy", "Phiêu lưu", "Thiếu nhi"]
+  },
+  {
+    "id": "017",
+    "tensach": "Dune",
+    "tentacgia": "Frank Herbert",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/57/5c/ea/94530eb8b8ebbc11257c5f7ada2a1647.jpg.webp",
+    "mota": "Một trong những tác phẩm khoa học viễn tưởng nổi tiếng nhất.",
+    "rating": 0,
+    "soluongnguoidadoc": 190,
+    "ngaycapnhat": "2022-10-25",
+    "theloai": ["Khoa học viễn tưởng", "Phiêu lưu"]
+  },
+  {
+    "id": "018",
+    "tensach": "Hai Số Phận",
+    "tentacgia": "Jeffrey Archer",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/55/14/c9/1693b27338a17f33fec5df6e36861630.png.webp",
+    "mota": "HAI SỐ PHẬN (tên gốc tiếng Anh là Kane and Abel) là cuốn tiểu thuyết được ông viết dựa theo câu chuyện của anh em Cain và Abel trong Kinh Thánh Cựu Ước.",
+    "rating": 5,
+    "soluongnguoidadoc": 210,
+    "ngaycapnhat": "2022-10-30",
+    "theloai": ["Kinh điển", "Lãng mạn", "Tâm lý"]
+  },
+  {
+    "id": "019",
+    "tensach": "Harry Potter và Phòng Chỉ Huy Bí Mật",
+    "tentacgia": "J.K. Rowling",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/83/70/f4/86c7b25669d603417f9672d2247e221f.jpg.webp",
+    "mota": "Harry Potter and the Order of the Phoenix.",
+    "rating": 5,
+    "soluongnguoidadoc": 230,
+    "ngaycapnhat": "2022-11-05",
+    "theloai": ["Fantasy", "Phiêu lưu", "Thiếu nhi"]
+  },
+  {
+    "id": "020",
+    "tensach": "Tiểu Sử Steve Jobs",
+    "tentacgia": "Walter Isaacson",
+    "anhsach": "https://salt.tikicdn.com/cache/750x750/ts/product/af/75/b2/be72408b86a62a897d8ee320995fabfe.jpg.webp",
+    "mota": "Cuốn sách của Isaacson dẫn người đọc bước vào cuộc đời của Steve Jobs, một “thiên tài” bước ra từ căn nhà nhỏ ở Palo Altos, với tuổi thơ dữ dỗi đầy rẫy những thăng trầm đến những giây phút bình yên hiếm hoi nhờ những ảnh hưởng tâm lý từ Ấn Độ giáo, từ những câu chuyện xoay quanh những xưởng phim, những tầm nhìn chiến lược ở Pixar, tinh thần sáng tạo đầy tính ‘cách mạng’ ở Apple đến những giây phút cuối đời chiến đấu với bệnh tật nhưng cũng không ngừng sáng tạo của ông.",
+    "rating": 4.5,
+    "soluongnguoidadoc": 180,
+    "ngaycapnhat": "2022-11-10",
+    "theloai": ["Y khoa", "Hồi hộp", "Phiêu lưu"]
+  }
+]

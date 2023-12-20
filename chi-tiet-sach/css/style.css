@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.book-details {
+
+
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.chi-tiet-sach {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  position: relative;
+
+}
+
+.chi-tiet-sach .thongtinanh .anhsach img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.chi-tiet-sach .thongtinanh {
+  display: flex;
+
+}
+
+.thongtinanh .anhsach {
+  width: 40%;
+  padding-right: 2rem;
+}
+
+.thongtinanh .anhsach img {
+  width: 100%;
+}
+
+.thongtinanh .thongtinsach {
+  width: 60%;
+}
+
+.book-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #495057;
+}
+
+.rating {
+  color: #ffc107;
+}
+
+.btn-order {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.btn-order:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.feedback-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.comment-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-container {
+  margin-top: 20px;
+}
+
+.comment {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-text {
+  margin-top: 5px;
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.chi-tiet-sach .book-details .list-post-other {
+  padding: 10px;
+}
+
+.chi-tiet-sach .book-details .list-post-other .lien-quan {
+  margin: 10px;
+  width: 100%;
+  display: flex;
+}
+
+
+.chi-tiet-sach .left-side {
+  width: 75%;
+}
+
+
+.chi-tiet-sach .mo-ta {
+  font-size: 16px;
+  opacity: 0.6;
+  /* display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden; */
+}
+
+.sach-lien-quan-list .sach-lien-quan {
+  text-align: left;
+}
+
+.sach-lien-quan-list .sach-lien-quan .btn-view-book {
+  width: 100%;
+}
+
+.sach-lien-quan-list .sach-lien-quan .card-title {
+  font-size: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+}
+
+.sach-lien-quan-list .sach-lien-quan .mo-ta-sach {
+  font-size: 12px;
+  opacity: 0.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+}
+
+.chi-tiet-sach .right-side {
+  width: 23%;
+  padding: 1rem;
+  padding-top: 60px;
+  background-color: #fff;
+  box-shadow: -5px 0 10px #ccc, 0 5px 10px #ccc, 5px 0 10px #ccc;
+  height: fit-content;
+  border-radius: 4px;
+}
+
+
+
+.list-sach-cung-tgia .sach-cung-tgia {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.list-sach-cung-tgia .sach-cung-tgia .anh-sach-cung-tg {
+  width: 40%;
+}
+
+.list-sach-cung-tgia .sach-cung-tgia .right-sach {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list-sach-cung-tgia .sach-cung-tgia .anh-sach-cung-tg img {
+  width: 100%;
+
+}
+
+.list-sach-cung-tgia .sach-cung-tgia .ten-sach {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.list-sach-cung-tgia .sach-cung-tgia .tac-gia {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.list-sach-cung-tgia .sach-cung-tgia .rating-container {
+  margin-bottom: 0.25rem;
+}
+
+.list-sach-cung-tgia .sach-cung-tgia .rating {
+  font-size: 12px;
+}
+
+
+
+.list-sach-cung-tgia .sach-cung-tgia .right-sach {
+  margin-left: 0.25rem;
+}
+
+.chi-tiet-sach .path-pages {
+  display: flex;
+  list-style-type: none;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  gap: 1rem;
+}
+
+.chi-tiet-sach .path-pages li a {
+  text-decoration: none;
+}

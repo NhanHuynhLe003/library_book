@@ -1,0 +1,123 @@
+.navbar-collapse .search-container input {
+    width: 20rem;
+    margin-right: 0 !important;
+    border-radius: 4px;
+}
+
+.navbar-collapse .focus-input-search input {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.navbar .login-btn {
+    margin: 0 1rem;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    transition: 200ms;
+}
+
+.navbar .login-btn:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+}
+
+
+.navbar .book-search-container {
+    position: relative;
+
+}
+
+.navbar .search-list-result {
+    position: absolute;
+    z-index: 100;
+    padding: 0;
+    top: 0.25rem;
+    z-index: 10;
+    left: 0;
+    border-radius: 4px;
+    background-color: #fff;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-y: auto;
+    box-shadow: -2px 0 2px #ccc, 0 2px 2px #ccc, 2px 0 2px #ccc;
+}
+
+.navbar .search-list-result::-webkit-scrollbar {
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    width: 6px;
+
+}
+
+.navbar .search-list-result::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+
+}
+
+.navbar .search-book a {
+    list-style-type: none;
+    display: flex;
+    padding: 6px;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar .search-book a:hover {
+
+    cursor: pointer;
+
+}
+
+.navbar .search-book a:hover h5 {
+    color: var(--primary-color);
+}
+
+.navbar .search-book .book-search-img {
+    width: 15%;
+
+}
+
+
+.navbar .search-book .book-search-img img {
+    width: 100%;
+}
+
+.navbar .search-book .book-search-info {
+    width: 88%;
+    padding-left: 8px;
+}
+
+.navbar .book-search-info .book-search-title {
+    font-size: 16px;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.navbar .book-search-info .book-search-author {
+    font-size: 14px;
+    opacity: 0.6;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.loadingAction {
+    min-height: 100px;
+}

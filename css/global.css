@@ -1,0 +1,12 @@
+:root {
+
+    --sup-text: #5b5b5b;
+    --xs-text: 10px;
+    --sm-text: 12px;
+    --sm-md-text: 14px;
+    --md-text: 16px;
+    --md-lg-text: 20px;
+    --lg-text: 24px;
+    --primary-color: #007bff;
+    --warning-color: #ffc107;
+}

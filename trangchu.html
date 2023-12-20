@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chu</title>
+
+    <link rel="icon" href="./Images/icons/icons8-book-shelf-64.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/fontawesome-free-6.4.2-web/css/all.css">
+
+    <!-- global css -->
+    <link rel="stylesheet" href="./css/global.css">
+
+    <!-- slider -->
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/trangchu.css">
+    <link rel="stylesheet" href="./css/cate-section.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+</head>
+
+<body>
+    <header>
+        <!-- Tạo Thanh navigation cho phần header -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <!-- đoạn code tạo logo -->
+            <a class="navbar-brand font-weight-bold text-uppercase" href="#">My Library</a>
+            <!-- Nút toggle cho thanh điều hướng trên thiết bị di động -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- đoạn code tạo các đường dẫn đến các page khác -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!-- đường dẫn đến trang chủ -->
+                    <!-- active để highlight cho biết đang ở trang hiện tại -->
+                    <li class="nav-item active font-weight-normal">
+                        <a class="nav-link" href="./trangchu.html">Trang Chủ</a>
+                    </li>
+
+                    <!-- đường dẫn đến thư viện -->
+                    <li class="nav-item font-weight-normal">
+                        <a class="nav-link" href="./pages/thuvien.html">Thư Viện <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+
+
+                    <!-- đường dẫn đến trang quản lý sách -->
+
+
+                </ul>
+
+                <!-- đoạn code cho phần search các cuốn sach trên thanh nav -->
+                <form class="my-2 my-lg-0 search-container">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <div class="book-search-container">
+
+                        <ul class="search-list-result">
+
+                        </ul>
+                    </div>
+                </form>
+                <!-- đi đến trang login -->
+
+            </div>
+        </nav>
+    </header>
+    <main id="content" class="container">
+        <!-- Tạo Banner quản cáp -->
+        <div class="advertise1">
+            <!-- dùng thư viện swiper để quản cáo có trượt qua và chạy tự động -->
+            <div class="swiper advertise-swiper">
+                <div class="swiper-wrapper poster_container">
+                    <!-- các quản cao sẽ được dùng jquery render ra bên trong -->
+                </div>
+                <!-- đoạn code cho phần chuyển trang bằng dấu chấm -->
+                <div class="swiper-pagination"></div>
+                <!-- phần chuyển đổi giữa các trang bằng nút mũi tên -->
+                <div class="swiper-button-next" style="color: #ccc; font-size: 14px;"></div>
+                <div class="swiper-button-prev" style="color: #ccc;"></div>
+            </div>
+        </div>
+        <br>
+        <!-- banner cứng cho sách -->
+        <div class="advertise2">
+            <img src="./Images/advertise_main/main_advertise.jpg" alt="main advertise">
+        </div>
+        <br>
+        <br>
+        <!-- Đoạn code cho phần hiển thị các quyển sách theo thứ tự mới nhất -->
+        <div class="book-container new_book">
+            <div class="book-header">
+                <h3>Sách Mới</h3>
+                <!-- link đến trang thư viện khi bấm vào nút xem tất cả -->
+                <a href="./pages/thuvien.html" class="watch-all-btn">Xem Tất Cả</a>
+            </div>
+
+            <hr>
+            <br>
+            <!-- đoạn code chứa những quyển sách bên trong swiper và có thể trượt qua lại -->
+            <div class="book_slide_container">
+
+                <div class="swiper new_book-swiper">
+                    <div class="swiper-wrapper book_new_container">
+                        <!-- thêm những quyển sách đã lọc theo mới nhất vào đây bằng jquery -->
+                    </div>
+                    <!-- các tác vụ điều khiển slider -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-btn-container">
+
+                        <div class="swiper-button-next" style="color: #ccc;"></div>
+                        <div class="swiper-button-prev" style="color: #ccc;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="book-container hot_book">
+            <div class="book-header">
+                <h3>Đọc Nhiều</h3>
+                <a href="./pages/thuvien.html" class="watch-all-btn">Xem Tất Cả</a>
+            </div>
+
+            <div class="book_slide_container">
+
+                <div class="swiper new_book-swiper">
+                    <div class="swiper-wrapper book_hot_container">
+                        <!-- phần sách đã lọc sẽ được render bên trong -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next" style="color: #ccc;"></div>
+                    <div class="swiper-button-prev" style="color: #ccc;"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="book-container category-section">
+            <!-- render ra danh sách các nút chọn thể loại -->
+            <ul class="cate-list">
+                <li><button class="btn cate-btn all-type-btn active-type-btn">Tất cả thể loại</button></li>
+                <li><button class="btn cate-btn self-help-type-btn">Phát triển cá nhân</button></li>
+                <li><button class="btn cate-btn pyschology-type-btn">Tâm lý</button></li>
+                <li><button class="btn cate-btn romantic-type-btn">Lãng mạn</button></li>
+                <li><button class="btn cate-btn adventure-type-btn">Phiêu lưu</button></li>
+                <li><button class="btn cate-btn classic-type-btn">Kinh điển</button></li>
+                <li><a href="./pages/thuvien.html" class="btn">Xem Thêm Thể Loại</a></li>
+            </ul>
+            <hr>
+            <br>
+            <ul class="book-cate-container">
+                <!-- phần sách đã lọc dưa trên các thể loại đã được chọn bên trên sẽ được render ra bên trong -->
+            </ul>
+        </div>
+        <br>
+        <br>
+        <!-- hiển thị ra các cuốn sách đã lọc theo sách yêu thích nhất -->
+        <div class="book-container favor_book">
+            <div class="book-header">
+                <h3>Yêu thích nhất</h3>
+                <a href="./pages/thuvien.html" class="watch-all-btn">Xem Tất Cả</a>
+            </div>
+            <hr>
+            <br>
+
+            <div class="book_slide_container">
+
+                <div class="swiper new_book-swiper">
+                    <div class="swiper-wrapper book_favor_container">
+                        <!-- sách đã lọc theo danh sach yêu thích sẽ được render bên trong -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next" style="color: #ccc;"></div>
+                    <div class="swiper-button-prev" style="color: #ccc;"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="book-container recommend_book">
+            <!-- Đoạn code hiển thị sách dựa theo đề suất -->
+            <div class="book-header">
+                <h3>Sách nên đọc</h3>
+                <a href="./pages/thuvien.html" class="watch-all-btn">Xem Tất Cả</a>
+            </div>
+            <hr>
+            <br>
+
+            <div class="book_slide_container">
+
+                <div class="swiper new_book-swiper">
+                    <div class="swiper-wrapper book_recommend_container">
+                        <!-- Sách sẽ được render bên trong vị trí này -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-btn-container">
+
+                        <div class="swiper-button-next" style="color: #ccc;"></div>
+                        <div class="swiper-button-prev" style="color: #ccc;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <!-- hiển thị slogun của tác giả -->
+        <div class=" book-container slogan-slide">
+            <div class="swiper slogan-slide-swiper">
+                <div class="swiper-wrapper slogan_container">
+
+                    <!-- Nội dung của lời nói và tên của tác giả sẽ được hiển thị bên trong -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next" style="color: #ccc;"></div>
+                <div class="swiper-button-prev" style="color: #ccc;"></div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </main>
+    <footer>
+        <!-- hiển thị nội dung trang web cột 1 -->
+        <div class="col col1">
+            <h5>Thông tin Trang</h5>
+            <p><b>Website thư viện sách</b> - là website luôn cập nhật những trang sách mới nhất thuộc
+                nhiều thể loại đặc sắc như sách phát triển bản thân, sách tài chính, tiểu thuyết, hay sách chữa lành một
+                cách nhanh nhất. Hỗ
+                trợ mọi thiết bị như di động và máy tính bảng.</p>
+
+        </div>
+        <!-- hiển thị nội dung trang web cột 2-->
+        <div class="col col2">
+            <h5>Thông tin hữu ích</h5>
+            <ul>
+                <li><a href="#">Giới thiệu chung</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Thỏa thuận dịch vụ</a></li>
+                <li><a href="#">Quyền lợi</a></li>
+                <li><a href="#">Quy định riêng tư</a></li>
+            </ul>
+        </div>
+        <!-- hiển thị nội dung trang web cột 3-->
+        <div class="col col3">
+            <h5>Thông tin liên hệ</h5>
+            <ul>
+                <li class="google"><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                <li class="facebook"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li class="twitter"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./js/slider.js"></script>
+
+<script>
+    function createStarRating(rating) {
+        if (rating === 0) {
+            return '<i class="far fa-star"></i>'.repeat(5); // Nếu rating là 0, hiển thị 5 ngôi sao rỗng
+        }
+
+        const fullStars = Math.floor(rating);
+        const hasHalfStar = rating % 1 !== 0;
+        const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+        const filledStars = Array.from({ length: fullStars }, (_, index) => '<i class="fas fa-star"></i>');
+        const halfStar = hasHalfStar ? '<i class="fas fa-star-half-alt"></i>' : '';
+        const emptyStar = Array.from({ length: emptyStars }, (_, index) => '<i class="far fa-star"></i>');
+
+        const starRatingHTML = filledStars.concat(halfStar, emptyStar).join('');
+        return starRatingHTML;
+    }
+    $(document).ready(function () {
+        function renderBook(selectorBookContainer = '', listBook = [], lenListBook = 12) {
+            for (let i = 0; i < lenListBook; i++) {
+                const book = listBook[i];
+                $(selectorBookContainer).append(`<div class="card swiper-slide book" style="width: 18rem;">
+                                <div class="hover-book">
+                                    <a href="../chi-tiet-sach/index.html?id=${book.id}" class="hover-control view-detail-btn btn btn-success">Chi
+                                        Tiết</a>
+                                    <button class="hover-control order-btn btn btn-primary">Thuê sách</button>
+                                </div>
+                                <div class="book-img-container">
+                                    <img class="card-img-top"
+                                    src=${book.anhsach}
+                                    alt="anh-${i}">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title book-title">${book.tensach}</h5>
+                                    <p class="card-text book-desc">${book.mota}</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item empty"></li>
+                                    <li class="list-group-item ratings">
+                                        ${createStarRating(book.rating)}
+                                    </li>
+    
+                                </ul>
+    
+                            </div>`)
+            }
+        }
+
+        for (let i = 1; i <= 4; i++) {
+            $('.poster_container').append(`<div class="swiper-slide"><img src="./Images/poster/poster_${i}.jpg" /></div>`)
+        }
+
+
+        $.getJSON('./jsons/books.json', function (data) {
+            const books = data;
+
+            const newBooks = books.slice().sort((a, b) => new Date(b.ngaycapnhat) - new Date(a.ngaycapnhat));
+            const hotBooks = books.slice().sort((a, b) => b.soluongnguoidadoc - a.soluongnguoidadoc);
+            const favorBooks = books.slice().sort((a, b) => b.rating - a.rating);
+            let weightNguoiDoc = 0.7;
+            let weightRating = 0.3;
+
+            // Tính điểm cho từng cuốn sách
+            books.forEach(function (book) {
+                book.totalScore = (book.soluongnguoidadoc * weightNguoiDoc) + (book.rating * weightRating);
+            });
+
+            const booksSortByScore = books.slice().sort(function (a, b) {
+                return b.totalScore - a.totalScore;
+            });
+
+
+            // console.log("Recommend:::", booksSortByScore)
+            renderBook('.book_new_container', newBooks, 10)
+            renderBook('.book_hot_container', hotBooks)
+            renderBook('.book_favor_container', favorBooks)
+            renderBook('.book_recommend_container', booksSortByScore)
+
+
+
+            const allBookTypeList = books.filter((book, index) => index < 9);
+            const selfHelfBookList = books.filter((book, index) => book.theloai.includes('Phát triển bản thân') && index < 9)
+            const psychologyBookList = books.filter((book, index) => book.theloai.includes('Tâm lý') && index < 9)
+            const romanticBookList = books.filter((book, index) => book.theloai.includes('Lãng mạn') && index < 9)
+            const classicBookList = books.filter((book, index) => book.theloai.includes("Kinh điển") && index < 9)
+            const addventureBookList = books.filter((book, index) => book.theloai.includes("Phiêu lưu") && index < 9)
+            const listBookType = [allBookTypeList, selfHelfBookList, psychologyBookList, romanticBookList, addventureBookList, classicBookList]
+
+            for (let i = 0; i < allBookTypeList.length; i++) {
+                const bookFilter = allBookTypeList[i]
+                $('.book-cate-container').append(`<li class="book-cate">
+                        <div class="left-book">
+                            <img src=${bookFilter.anhsach}
+                                alt="anh-sach">
+                        </div>
+                        <div class="right-book">
+                            <h5 class="name-book">${bookFilter.tensach}</h5>
+                            <div class="author">${bookFilter.tentacgia}</div>
+                            <div class="ratings">
+                                ${createStarRating(bookFilter.rating)}
+                            </div>
+                            <div class="desc">${bookFilter.mota}
+                            </div>
+                        </div>
+                    </li>`)
+            }
+
+            $('.cate-list .cate-btn').click(async function () {
+                $('.book-cate-container').css('justify-content', 'center');
+                $('.book-cate-container').html(`<div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+  <span class="sr-only">Loading...</span>
+</div>`)
+
+                await new Promise((resolve) => setTimeout(resolve, 700))
+                $('.book-cate-container').css('justify-content', 'flex-start');
+
+                $('.book-cate-container').text('')
+                $('.cate-list .cate-btn').removeClass('active-type-btn')
+                $(this).addClass('active-type-btn')
+
+                const indexBtnType = $(this).parent().index();
+                const filteredBooks = listBookType[indexBtnType];
+                console.log(filteredBooks)
+                for (let i = 0; i < filteredBooks.length; i++) {
+                    const bookFilter = filteredBooks[i]
+                    $('.book-cate-container').append(`<li class="book-cate">
+                        <div class="left-book">
+                            <img src=${bookFilter.anhsach}
+                                alt="anh-sach">
+                        </div>
+                        <div class="right-book">
+                            <h5 class="name-book">${bookFilter.tensach}</h5>
+                            <div class="author">${bookFilter.tentacgia}</div>
+                            <div class="ratings">
+                                ${createStarRating(bookFilter.rating)}
+                            </div>
+                            <div class="desc">${bookFilter.mota}
+                            </div>
+                        </div>
+                    </li>`)
+                }
+            })
+
+            //handle search 
+            const searchBarInput = document.querySelector('.navbar .search-container input');
+            searchBarInput.oninput = function (e) {
+                let searchVal = e.target.value;
+                let listBookSearched = [];
+                if (searchVal !== '') {
+                    listBookSearched = books.filter((book, index) => book.tensach.includes(searchVal));
+
+                }
+                $('.search-list-result').text('')
+                listBookSearched.forEach((book, index) => {
+                    const bookTitleFound = book.tensach.replace(searchVal, `<b style="color: var(--primary-color);">${searchVal}</b>`)
+                    $('.search-list-result').append(`<li class="search-book book-search-${index}">
+                            <a href="./chi-tiet-sach/index.html?id=${book.id}">
+                                <div class="book-search-img">
+                                    <img src=${book.anhsach}
+                                        alt="anh-sach-${index}">
+                                </div>
+                                <div class="book-search-info">
+                                    <h5 class="book-search-title">${bookTitleFound}</h5>
+                                    <h5 class="book-search-author">${book.tentacgia}</h5>
+                                </div>
+                                </a>
+                                
+                            </li>`)
+                })
+            }
+        })
+
+        $.getJSON('./jsons/bookAuthors.json', function (sloguns) {
+            $('.slogan-slide .slogan_container').text('');
+            sloguns.forEach((slogun) => {
+                $('.slogan-slide .slogan_container').append(`<div class="swiper-slide author_slogan_wrapper">
+                        <div class="author_info">
+                            ___<span>${slogun.author}</span>___
+                        </div>
+                        <div class="author_content">
+                            ${slogun.content}
+                        </div>
+                    </div>`)
+            })
+
+        })
+    })
+
+
+</script>
+
+</html>
