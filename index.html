@@ -305,7 +305,7 @@
                 const book = listBook[i];
                 $(selectorBookContainer).append(`<div class="card swiper-slide book" style="width: 18rem;">
                                 <div class="hover-book">
-                                    <a href="../chi-tiet-sach/index.html?id=${book.id}" class="hover-control view-detail-btn btn btn-success">Chi
+                                    <a href="./pages/chi-tiet-sach.html?id=${book.id}" class="hover-control view-detail-btn btn btn-success">Chi
                                         Tiết</a>
                                     <button class="hover-control order-btn btn btn-primary">Thuê sách</button>
                                 </div>
@@ -438,7 +438,7 @@
                 listBookSearched.forEach((book, index) => {
                     const bookTitleFound = book.tensach.replace(searchVal, `<b style="color: var(--primary-color);">${searchVal}</b>`)
                     $('.search-list-result').append(`<li class="search-book book-search-${index}">
-                            <a href="./chi-tiet-sach/index.html?id=${book.id}">
+                            <a href="./pages/chi-tiet-sach.html?id=${book.id}">
                                 <div class="book-search-img">
                                     <img src=${book.anhsach}
                                         alt="anh-sach-${index}">
